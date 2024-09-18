@@ -69,7 +69,7 @@ namespace MUI {
 			this->Titulo->AutoSize = true;
 			this->Titulo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Titulo->Location = System::Drawing::Point(293, 9);
+			this->Titulo->Location = System::Drawing::Point(12, 9);
 			this->Titulo->Name = L"Titulo";
 			this->Titulo->Size = System::Drawing::Size(411, 37);
 			this->Titulo->TabIndex = 0;
@@ -77,7 +77,7 @@ namespace MUI {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(300, 77);
+			this->textBox1->Location = System::Drawing::Point(12, 73);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(404, 26);
 			this->textBox1->TabIndex = 1;
@@ -87,15 +87,16 @@ namespace MUI {
 			this->array->AutoSize = true;
 			this->array->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->array->Location = System::Drawing::Point(354, 131);
+			this->array->Location = System::Drawing::Point(7, 135);
 			this->array->Name = L"array";
 			this->array->Size = System::Drawing::Size(297, 26);
 			this->array->TabIndex = 2;
 			this->array->Text = L"Ingrese tamaño del arreglo";
+			this->array->Click += gcnew System::EventHandler(this, &MyForm::array_Click);
 			// 
 			// Bbs
 			// 
-			this->Bbs->Location = System::Drawing::Point(12, 235);
+			this->Bbs->Location = System::Drawing::Point(12, 188);
 			this->Bbs->Name = L"Bbs";
 			this->Bbs->Size = System::Drawing::Size(124, 32);
 			this->Bbs->TabIndex = 3;
@@ -107,7 +108,7 @@ namespace MUI {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(993, 366);
+			this->ClientSize = System::Drawing::Size(836, 366);
 			this->Controls->Add(this->Bbs);
 			this->Controls->Add(this->array);
 			this->Controls->Add(this->textBox1);
@@ -149,5 +150,7 @@ namespace MUI {
 			MessageBox::Show("Error: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
+private: System::Void array_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
